@@ -30,7 +30,7 @@ const coreCapabilities = [
 const platformIntelligence = [
   { title: "Generative-AI Workflows", desc: "Automated reasoning, planning & execution across business processes.", icon: FiGitMerge, color: "text-blue-500" },
   { title: "Unified AI Search", desc: "Context-aware retrieval across all organizational knowledge.", icon: FiSearch, color: "text-indigo-500" },
-  { title: "Enterprise Knowledge Graph", desc: "Deep organizational modeling with relationship understanding.", icon: FiLayers, color: "text-emerald-600" },
+  { title: "Enterprise Context Layer", desc: "Deep organizational context with adaptive understanding across teams, tools, and data.", icon: FiLayers, color: "text-emerald-600" },
   { title: "Tool & System Integration", desc: "Connects with your existing apps, CRMs, databases & workflows.", icon: FiIntegrate, color: "text-teal-600" },
   { title: "Governance & Security", desc: "Permission-aware, compliant & secure by design.", icon: FiKey, color: "text-rose-600" },
   { title: "Productivity Acceleration", desc: "Faster onboarding, reduced friction & improved operational speed.", icon: FiTrendingUp, color: "text-yellow-600" },

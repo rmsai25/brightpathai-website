@@ -4,6 +4,9 @@ import Header from "../../components/Header.jsx";
 export const metadata = {
   title: "Brightpath AI",
   description: "Production-ready AI systems",
+  icons: {
+    icon: "/logu.png",     
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -16,3 +19,19 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
+// export const metadata = {
+//   title: "Brightpath AI ",
+//   icons: {
+//     icon: "/logu.png",     
+//   },
+// };
+
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en">
+//       <body>{children}</body>
+//     </html>
+//   );
+// }
