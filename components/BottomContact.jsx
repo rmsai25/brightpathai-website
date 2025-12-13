@@ -1040,13 +1040,13 @@ export default function GetInTouch() {
           className="bg-[#1A1A2B] text-white p-10 md:p-14 flex flex-col justify-center h-full space-y-10"
         >
           {/* ✅ CALL */}
-          <div>
+          {/* <div>
             <p className="text-sm font-semibold mb-2 flex items-center gap-2">
               <FiPhoneCall /> Call Us
             </p>
             <p className="text-gray-100 text-sm mb-2">Speak directly with our team.</p>
             <p className="font-medium text-lg">+91 98765 43210</p>
-          </div>
+          </div> */}
 
           {/* ✅ EMAIL */}
           <div>
