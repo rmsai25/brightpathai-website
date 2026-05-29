@@ -517,6 +517,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const basePath = process.env.NODE_ENV === "production" ? "/brightpathai-website" : "";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -538,7 +540,7 @@ export default function Header() {
         {/* LOGO */}
         <Link href="/" className="flex items-center">
           <img
-            src="/logu.png"
+            src={`${basePath}/logu.png`}
             alt="Brightpath AI Logo"
             className="h-10 object-contain transition-all duration-300"
           />

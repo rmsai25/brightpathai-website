@@ -440,6 +440,8 @@ import AnimatedWhatWeBuildClient from "../../components/AnimatedWhatWeBuildClien
 
 import { motion } from "framer-motion";
 
+const basePath = process.env.NODE_ENV === "production" ? "/brightpathai-website" : "";
+
 // 🔥 Animated card component
 function HowWeWorkCard({ item, index }) {
   return (
@@ -479,27 +481,27 @@ const Home = () => {
   const howWeWorkItems = [
     {
       num: "01",
-      img: "/mobile.png",
+      img: `${basePath}/mobile.png`,
       text: "Install Our Application to get started.",
     },
     {
       num: "02",
-      img: "/whatsapp.png",
+      img: `${basePath}/whatsapp.png`,
       text: "Scan the QR code to Connect Your WhatsApp.",
     },
     {
       num: "03",
-      img: "/email.png",
+      img: `${basePath}/email.png`,
       text: "Connect with your Gmail & Get Ready.",
     },
     {
       num: "04",
-      img: "/px.png",
+      img: `${basePath}/px.png`,
       text: "Enter Your Query in Bpai Website",
     },
     {
       num: "05",
-      img: "/new.png",
+      img: `${basePath}/new.png`,
       imgClass: "w-16 h-16", // 🔥 slightly bigger image
       text: "Receive LLM Backed AI responses.",
     },

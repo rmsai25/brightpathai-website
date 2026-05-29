@@ -1,11 +1,13 @@
 import "./globals.css";
 import Header from "../../components/Header.jsx";
 
+const basePath = process.env.NODE_ENV === "production" ? "/brightpathai-website" : "";
+
 export const metadata = {
   title: "Brightpath AI",
   description: "Production-ready AI systems",
   icons: {
-    icon: "/logu.png",     
+    icon: `${basePath}/logu.png`,     
   },
 };
 
