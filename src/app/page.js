@@ -440,7 +440,7 @@ import AnimatedWhatWeBuildClient from "../../components/AnimatedWhatWeBuildClien
 
 import { motion } from "framer-motion";
 
-const basePath = process.env.NODE_ENV === "production" ? "/brightpathai-website" : "";
+const basePath = "";
 
 // 🔥 Animated card component
 function HowWeWorkCard({ item, index }) {
