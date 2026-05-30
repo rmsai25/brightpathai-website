@@ -319,7 +319,7 @@ export default function Home() {
               { icon: <FiDatabase size={24} />, label: "Unified Customer Timeline", desc: "A single view of every touchpoint linked to your CRM & ERP." },
               { icon: <FiLayers size={24} />, label: "Structured Data Extraction", desc: "Intent, sentiment, promises, deadlines — pulled automatically." },
               { icon: <FiActivity size={24} />, label: "Workflow Automation", desc: "Trigger CRM updates, Slack alerts, or ticket routing instantly." },
-              { icon: <FiCheckCircle size={24} />, label: "Execution Monitoring", desc: "We track if humans followed through — catching dropped balls." },
+              { icon: <FiCheckCircle size={24} />, label: "Execution Monitoring", desc: "We verify commitments and flag delays before they impact customers." },
               { icon: <FiShield size={24} />, label: "Privacy-First Deployment", desc: "Your data stays private. Never used to train public models." },
             ].map((feat, i) => (
               <motion.div
@@ -356,7 +356,7 @@ export default function Home() {
               { icon: <FiDatabase size={24} />, label: "Unified Interaction Graph", desc: "We ingest calls, emails, texts, and tickets, linking them to your CRM and ERP data to create a single timeline-based view of every customer." },
               { icon: <FiLayers size={24} />, label: "Intelligence & Extraction", desc: "Our models extract structured data — intent, sentiment, promises made, deadlines set, and missing information from every interaction." },
               { icon: <FiActivity size={24} />, label: "Workflow & Orchestration", desc: "When data is extracted, we trigger actions — update a CRM, draft an email, alert a manager, or route a ticket based on your business logic." },
-              { icon: <FiCheckCircle size={24} />, label: "Execution Monitoring", desc: "We watch what happens after the AI acts. If a human doesn't follow up, we catch the dropped ball before the customer complains." },
+              { icon: <FiCheckCircle size={24} />, label: "Execution Monitoring", desc: "We watch what happens after the AI acts. If a promised action is delayed or missed, we alert the right team before it becomes a customer issue." },
             ].map((cap, i) => (
               <motion.div
                 key={i}
@@ -394,9 +394,9 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 bg-[#e9fbf6] text-[#00a980] text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
                   <FiActivity size={12} /> Our Process
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Four steps. Zero dropped balls.</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Four steps. Every action tracked.</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  From the first customer interaction to the final follow-up — we make sure nothing falls through the cracks.
+                  From the first customer interaction to the final follow-up — we make sure critical work is captured, monitored, and completed.
                 </p>
                 <div className="mt-6 flex flex-col gap-2">
                   {howWeWorkItems.map((item, i) => (
@@ -480,7 +480,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} className="text-center mb-16">
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4 text-gray-900">Why Brightpath AI?</h2>
-            <p className="text-gray-500 font-medium">Built for businesses that can't afford dropped balls.</p>
+            <p className="text-gray-500 font-medium">Built for businesses that can’t afford missed follow-ups.</p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
