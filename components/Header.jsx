@@ -555,12 +555,18 @@ export default function Header() {
         </button>
 
         {/* DESKTOP NAVIGATION */}
-        <nav className="hidden md:flex gap-10 text-white text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-10 text-white text-sm font-medium">
           <Link
             href="#what-we-build"
             className="hover:text-[#9CA3AF] transition"
           >
             What We Build
+          </Link>
+          <Link
+            href="#contact"
+            className="bg-[#19F7C1] text-black px-5 py-2 rounded-full font-semibold hover:bg-[#12e0af] transition-all shadow-[0_0_10px_#19F7C14d]"
+          >
+            Request Early Access
           </Link>
         </nav>
       </div>

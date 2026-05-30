@@ -1,140 +1,3 @@
-// "use client";
-// import { motion } from "framer-motion";
-// import Link from "next/link";
-
-
-
-// export default function Hero() {
-//   return (
-//     <section
-//       id="hero"
-//       className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden text-white"
-//       style={{
-//         background:
-//           "radial-gradient(ellipse at top, #0b1f2e 0%, #030b14 60%, #02070e 100%)",
-//       }}
-//     >
-//       {/* Glass gradient behind navbar */}
-//       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white/15 via-white/5 to-transparent backdrop-blur-xl z-20 pointer-events-none"></div>
-
-//       {/* Star glow effects */}
-//       <div className="absolute -left-24 top-32 w-96 h-96 rounded-full bg-cyan-400/10 blur-[140px]"></div>
-//       <div className="absolute right-0 bottom-40 w-[420px] h-[420px] rounded-full bg-teal-400/10 blur-[160px]"></div>
-
-//       {/* Main Content */}
-//       <motion.div
-//         initial={{ opacity: 0, y: 40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.7 }}
-//         className="relative z-10 max-w-4xl text-center px-6"
-//       >
-//         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide leading-tight text-[#E9C89A]">
-//           AI that quietly delivers.
-//         </h1>
-
-//         <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-//           Brightpath AI builds pragmatic, private, and reliable AI systems for real businesses.
-//           Production-grade. Privacy-first. In stealth — early partners welcome.
-//         </p>
-
-//         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-//           {/* Primary CTA */}
-//           <Link
-//             href="#request-access"
-//             className="px-8 py-4 rounded-full bg-[#FF9F43] text-black font-semibold
-//                        transition-all duration-300 hover:bg-[#ff8a1f] hover:scale-105"
-//           >
-//             Request Early Access
-//           </Link>
-
-//           {/* Secondary CTA */}
-//           <Link
-//             href="#what-we-build"
-//             className="px-8 py-4 rounded-full border border-[#FF9F43] text-[#FF9F43]
-//                        transition-all duration-300 hover:bg-[#FF9F43] hover:text-black hover:scale-105"
-//           >
-//             What We Build
-//           </Link>
-//         </div>
-//       </motion.div>
-
-//       {/* Bottom fade */}
-//       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#02070e] to-transparent pointer-events-none"></div>
-//     </section>
-//   );
-// }
-
-
-
-
-// "use client";
-// import { motion } from "framer-motion";
-// import Link from "next/link";
-
-// export default function Hero() {
-//   return (
-//     <section
-//       id="hero"
-//       className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden text-white"
-//       style={{
-//         background:
-//           "radial-gradient(ellipse at top, #0b1f2e 0%, #030b14 60%, #02070e 100%)",
-//       }}
-//     >
-//       {/* Glass gradient behind navbar */}
-//       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white/15 via-white/5 to-transparent backdrop-blur-xl z-20 pointer-events-none"></div>
-
-//       {/* Star glow effects */}
-//       <div className="absolute -left-24 top-32 w-96 h-96 rounded-full bg-cyan-400/10 blur-[140px]"></div>
-//       <div className="absolute right-0 bottom-40 w-[420px] h-[420px] rounded-full bg-teal-400/10 blur-[160px]"></div>
-
-//       {/* Main Content */}
-//       <motion.div
-//         initial={{ opacity: 0, y: 40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.7 }}
-//         className="relative z-10 max-w-4xl text-center px-6"
-//       >
-//         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide leading-tight text-white">
-//           AI that quietly delivers.
-//         </h1>
-
-//         <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-//           Brightpath AI builds pragmatic, private, and reliable AI systems for
-//           real businesses. Production-grade. Privacy-first. In stealth — early
-//           partners welcome.
-//         </p>
-
-//         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-//           {/* ✅ Primary CTA — Neon Mint */}
-//           <Link
-//             href="#request-access"
-//             className="px-8 py-4 rounded-full bg-[#19F7C1] text-black font-semibold
-//                        transition-all duration-300 hover:bg-[#12e0af] hover:scale-105
-//                        shadow-[0_0_20px_#19F7C14d]"
-//           >
-//             Request Early Access
-//           </Link>
-
-//           {/* ✅ Secondary CTA — SAME Neon Mint Hover */}
-//           <Link
-//             href="#what-we-build"
-//             className="px-8 py-4 rounded-full border border-[#19F7C1] text-[#19F7C1]
-//                        transition-all duration-300
-//                        hover:bg-[#19F7C1] hover:text-black hover:scale-105"
-//           >
-//             What We Build
-//           </Link>
-//         </div>
-//       </motion.div>
-
-//       {/* Bottom fade */}
-//       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#02070e] to-transparent pointer-events-none"></div>
-//     </section>
-//   );
-// }
-
-
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -158,21 +21,19 @@ export default function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="relative z-10 max-w-4xl text-center px-6"
+        className="relative z-10 max-w-4xl text-center px-6 pt-32 pb-24"
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide leading-tight text-white">
-          AI that quietly delivers.
+          Customer operations, made intelligent.
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Brightpath AI builds pragmatic, private, and reliable AI systems for
-          real businesses. Production-grade. Privacy-first. In stealth — early
-          partners welcome.
+          Brightpath AI helps businesses connect customer conversations, business data, and team workflows into one AI-powered operations layer.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
           <Link
-            href="#request-access"
+            href="#contact"
             className="px-8 py-4 rounded-full bg-[#19F7C1] text-black font-semibold
                        transition-all duration-300 hover:bg-[#12e0af] hover:scale-105
                        shadow-[0_0_20px_#19F7C14d]"
@@ -190,9 +51,6 @@ export default function Hero() {
           </Link>
         </div>
       </motion.div>
-
-      {/* Fade bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#02070e] to-transparent pointer-events-none"></div>
     </section>
   );
 }
