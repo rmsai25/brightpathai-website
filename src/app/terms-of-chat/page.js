@@ -183,7 +183,7 @@ export default function TermsOfChat() {
             monitoring, and what you can rely on.
           </p>
           <p className="mt-4 text-gray-500 text-sm">
-            Effective Date: 01-07-2026 &nbsp;·&nbsp; Brightpath AI
+            Effective Date: 01-06-2026 &nbsp;·&nbsp; Brightpath AI
           </p>
         </div>
       </div>
