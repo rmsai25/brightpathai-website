@@ -774,7 +774,204 @@
 
 //         <div className="max-w-7xl mx-auto px-6 mt-6 flex justify-between text-xs text-gray-500">
 //           <Link href="#hero">Back to Top</Link>
-//           <p>© {new Date().getFullYear()} Brightpath Technology & Services Pvt. Ltd.</p>"use client";
+//                   key={num}
+//                   onClick={() => setStars(num)}
+//                   onMouseEnter={() => setHovered(num)}
+//                   onMouseLeave={() => setHovered(0)}
+//                   className={`${
+//                     num <= (hovered || stars)
+//                       ? "text-[#19F7C1]"
+//                       : "text-gray-600"
+//                   }`}
+//                 >
+//                   ★
+//                 </span>
+//               ))}
+//             </div>
+
+//             {/* Input */}
+//             <div className="flex gap-2">
+//               <input
+//                 value={review}
+//                 onChange={(e) => setReview(e.target.value.slice(0, 200))}
+//                 placeholder="Share your feedback…"
+//                 className="w-full bg-transparent border border-gray-700 px-3 py-2 rounded-md text-xs outline-none"
+//               />
+
+//               <button
+//                 onClick={submitReview}
+//                 disabled={!stars || review.trim().length < 5}
+//                 className="bg-[#727c8d] hover:bg-[#5f6877] px-3 py-2 rounded-md disabled:opacity-40"
+//               >
+//                 <MdSend size={16} />
+//               </button>
+//             </div>
+
+//             {status && <p className="mt-2 text-xs text-gray-400">{status}</p>}
+//           </div>
+//         </div>
+
+//         <div className="max-w-7xl mx-auto px-6 mt-12 border-t border-white/10"></div>
+
+//         <div className="max-w-7xl mx-auto px-6 mt-6 flex justify-between text-xs text-gray-500">
+//           <Link href="#hero">Back to Top</Link>
+//           <p>© {new Date().getFullYear()} Brightpath Technology</p>
+//         </div>
+//       </footer>
+//     </>
+//   );
+// }
+
+
+// "use client";
+// import { useState } from "react";
+// import Link from "next/link";
+// import { MdSend } from "react-icons/md";
+
+// export default function Footer() {
+//   const [stars, setStars] = useState(0);
+//   const [hovered, setHovered] = useState(0);
+//   const [review, setReview] = useState("");
+//   const [status, setStatus] = useState("");
+
+//   // ✅ Save review to localStorage (NO backend)
+//   const submitReview = () => {
+//     if (!stars) {
+//       setStatus("❌ Please select a star rating.");
+//       return;
+//     }
+
+//     if (review.trim().length < 5) {
+//       setStatus("❌ Please write at least 5 characters.");
+//       return;
+//     }
+
+//     const newReview = {
+//       stars,
+//       review,
+//       createdAt: new Date().toISOString(),
+//     };
+
+//     const existingReviews = JSON.parse(
+//       localStorage.getItem("reviews") || "[]"
+//     );
+
+//     existingReviews.push(newReview);
+
+//     localStorage.setItem("reviews", JSON.stringify(existingReviews));
+
+//     setStatus("✅ Thanks for your feedback!");
+//     setStars(0);
+//     setReview("");
+//   };
+
+//   return (
+//     <>
+//       <div className="w-full h-[1px] bg-white/20"></div>
+
+//       <footer className="bg-black text-gray-300 pt-16 pb-10 border-t border-white/10">
+//         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:space-x-12">
+
+//           {/* Brand */}
+//           <div className="flex flex-col w-full md:w-auto">
+//             <Link href="#hero" className="text-xl font-bold hover:text-white transition">
+//               Brightpath AI
+//             </Link>
+//             <p className="text-sm text-gray-400 max-w-xs">
+//               Brightpath AI builds private, reliable, and production-grade AI systems designed for enterprises.
+//             </p>
+//           </div>
+
+//           {/* Product */}
+//           <div className="flex flex-col w-full md:w-auto">
+//             <h3 className="text-sm font-semibold text-white mb-4">PRODUCT</h3>
+//             <ul className="space-y-2 text-sm text-gray-300">
+//               <li>Agentic Workflows</li>
+//               <li>Private RAG</li>
+//               <li>Evaluation & Evals</li>
+//               <li>Observability Tools</li>
+//               <li>Edge Inference</li>
+//               <li>Security & Privacy</li>
+//               <li>Deployment Platform</li>
+//             </ul>
+//           </div>
+
+//           {/* Resources (RESTORED ✅) */}
+//           <div className="flex flex-col w-full md:w-auto">
+//             <h3 className="text-sm font-semibold text-white mb-4">RESOURCES</h3>
+//             <ul className="space-y-2 text-sm text-gray-300">
+//               <li>Blog</li>
+//               <li>Partner Program</li>
+//               <li>Help Center</li>
+//               <li>Pricing</li>
+//               <li>Engineering Updates</li>
+//               <li>AI Guidelines</li>
+//             </ul>
+//           </div>
+
+//           {/* Company */}
+//           <div className="flex flex-col w-full md:w-auto">
+//             <h3 className="text-sm font-semibold text-white mb-4">COMPANY</h3>
+//             <ul className="space-y-2 text-sm text-gray-300">
+//               <li><Link href="#about" className="hover:text-white">About Us</Link></li>
+//               <li><Link href="#request-access" className="hover:text-white">Contact</Link></li>
+//             </ul>
+//           </div>
+
+//           {/* ⭐ Feedback Section */}
+//           {/* <div className="bg-black text-white p-5 rounded-md w-full md:w-auto"> */}
+//           <div className="bg-black text-white p-5 rounded-md w-full md:w-auto self-start">
+
+//             <p className="text-gray-400 text-xs mb-3">Rate your experience</p>
+
+//             {/* Stars */}
+//             <div className="flex gap-1 mb-3 text-lg cursor-pointer">
+//               {[1, 2, 3, 4, 5].map((num) => (
+//                 <span
+//                   key={num}
+//                   onClick={() => setStars(num)}
+//                   onMouseEnter={() => setHovered(num)}
+//                   onMouseLeave={() => setHovered(0)}
+//                   className={`transition ${
+//                     num <= (hovered || stars)
+//                       ? "text-[#19F7C1]"
+//                       : "text-gray-600"
+//                   }`}
+//                 >
+//                   ★
+//                 </span>
+//               ))}
+//             </div>
+
+//             {/* Input */}
+//             <div className="flex gap-2">
+//               <input
+//                 value={review}
+//                 onChange={(e) => setReview(e.target.value.slice(0, 200))}
+//                 placeholder="Share your feedback…"
+//                 className="w-full bg-transparent border border-gray-700 px-3 py-2 rounded-md text-xs outline-none"
+//               />
+
+//               <button
+//                 onClick={submitReview}
+//                 disabled={!stars || review.trim().length < 5}
+//                 className="bg-[#727c8d] hover:bg-[#5f6877] px-3 py-2 rounded-md disabled:opacity-40"
+//               >
+//                 <MdSend size={16} />
+//               </button>
+//             </div>
+
+//             {status && <p className="mt-2 text-xs text-gray-400">{status}</p>}
+//           </div>
+//         </div>
+
+//         <div className="max-w-7xl mx-auto px-6 mt-12 border-t border-white/10"></div>
+
+//         <div className="max-w-7xl mx-auto px-6 mt-6 flex justify-between text-xs text-gray-500">
+//           <Link href="#hero">Back to Top</Link>
+//           <p>© {new Date().getFullYear()} Brightpath Technology & Services Pvt. Ltd.</p>
+
+"use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiArrowUp } from "react-icons/fi";
@@ -810,7 +1007,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col max-w-xs">
-            <Link href="#hero" className="text-base font-bold text-white hover:text-[#00a980] transition">
+            <Link href="/" className="text-base font-bold text-white hover:text-[#00a980] transition">
               Brightpath AI
             </Link>
             <p className="text-xs text-gray-500 mt-1.5 leading-relaxed">
@@ -823,13 +1020,23 @@ export default function Footer() {
             <h3 className="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-3">Company</h3>
             <ul className="space-y-1.5 text-sm">
               <li>
-                <Link href="#what-we-build" className="hover:text-white transition">What We Build</Link>
+                <Link href="/#what-we-build" className="hover:text-white transition">What We Build</Link>
               </li>
               <li>
-                <Link href="#how-we-work" className="hover:text-white transition">How We Work</Link>
+                <Link href="/#how-we-work" className="hover:text-white transition">How We Work</Link>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-white transition">Contact</Link>
+                <Link href="/#contact" className="hover:text-white transition">Contact</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-xs font-semibold text-gray-500 tracking-widest uppercase mb-3">Legal</h3>
+            <ul className="space-y-1.5 text-sm">
+              <li>
+                <Link href="/terms-of-chat" className="hover:text-white transition">Terms of Chat</Link>
               </li>
             </ul>
           </div>
