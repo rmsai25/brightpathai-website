@@ -4,10 +4,63 @@ import Link from "next/link";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 
+const faqItems = [
+  {
+    question: "Am I speaking to a human or AI?",
+    answer: "Your conversation may be handled by RentMyStay staff, AI-assisted systems, automated workflows or a combination of these. You may ask to speak with a human agent at any time by writing 'Connect me to a human agent' or similar.",
+  },
+  {
+    question: "Who operates this chat?",
+    answer: "RentMyStay is owned and operated by BrightPath Technology and Services Pvt. Ltd. The chat uses Brightpath AI technology developed and operated by the same company.",
+  },
+  {
+    question: "What information does the chat collect?",
+    answer: "The chat may process your messages, contact details, timestamps, uploaded files and relevant booking, payment, property or support information needed to handle your request.",
+  },
+  {
+    question: "Is my chat connected to my booking?",
+    answer: "Where necessary, your conversation may be connected with your RentMyStay account, enquiry, booking, payment, property, maintenance or previous support records.",
+  },
+  {
+    question: "Are conversations stored?",
+    answer: "Conversations may be retained for customer support, booking management, dispute resolution, fraud prevention, security and legal compliance. Different records may have different retention periods. See 'Data Retention and Deletion' for details.",
+  },
+  {
+    question: "Is my information used to train AI?",
+    answer: "Chat information is not permitted to be used to train publicly available AI models. It may be processed under controlled conditions to operate, secure, test and improve RentMyStay's private support system.",
+  },
+  {
+    question: "Can chat confirm a booking, payment or refund?",
+    answer: "A chat reply is not final confirmation unless it clearly states that it is authorized and is supported by the relevant booking record, invoice, receipt, agreement or account record.",
+  },
+  {
+    question: "How do I reach a human?",
+    answer: "Write 'Connect me to a human agent' or contact RentMyStay at help@rentmystay.com or +91 9035750377.",
+  },
+  {
+    question: "What should I do during an emergency?",
+    answer: "Do not rely only on chat. Contact emergency services, building security, the caretaker or the appropriate local authority immediately.",
+  },
+  {
+    question: "How can I access, correct or delete my data?",
+    answer: "Contact RentMyStay at contact@rentmystay.com. Requests may require identity verification, and some records may need to be retained for bookings, payments, disputes or legal compliance.",
+  },
+];
+
 const sections = [
   {
-    id: "purpose",
+    id: "who-operates",
     number: "1",
+    title: "Who Operates This Chat",
+    content: [
+      "RentMyStay is a brand and service owned and operated by BrightPath Technology and Services Pvt. Ltd. This chat uses Brightpath AI technology developed and operated by the same company to provide human, AI-assisted and automated customer support.",
+      "In these Chat Terms, 'RentMyStay,' 'we,' 'us' and 'our' refer to BrightPath Technology and Services Pvt. Ltd. 'Brightpath AI' refers to the technology used to provide and support the chat service.",
+      "Third-party service providers may process limited information on our behalf where necessary to host, secure, operate or support the service, subject to appropriate contractual and privacy safeguards.",
+    ],
+  },
+  {
+    id: "purpose",
+    number: "2",
     title: "Purpose of Chat Support",
     content: [
       "Our chat support is provided to help users with general enquiries, booking-related questions, property support, maintenance requests, payment-related guidance, check-in/check-out assistance, and other customer service matters.",
@@ -16,7 +69,7 @@ const sections = [
   },
   {
     id: "ai-responses",
-    number: "2",
+    number: "3",
     title: "Human and AI-Assisted Responses",
     content: [
       "This chat may be answered by RentMyStay support staff, AI-assisted systems, automated workflows, or a combination of these.",
@@ -26,7 +79,7 @@ const sections = [
   },
   {
     id: "accuracy",
-    number: "3",
+    number: "4",
     title: "Accuracy and Verification",
     content: [
       "We try to provide accurate and helpful responses. However, chat replies may sometimes be incomplete, delayed, outdated, misunderstood, or incorrect.",
@@ -36,28 +89,37 @@ const sections = [
   },
   {
     id: "booking-payment",
-    number: "4",
+    number: "5",
     title: "Booking, Payment, and Property Matters",
     content: [
       "Any booking, payment, refund, cancellation, rent, deposit, or property-related information shared over chat is subject to verification against our official records.",
-      "A chat message by itself does not create a confirmed booking, refund, discount, waiver, price commitment, maintenance commitment, legal obligation, or policy exception unless it is confirmed through an official authorized channel.",
-      "Official channels may include confirmed booking details, invoices, receipts, signed agreements, email confirmations, written policies, account statements, system records, or authorized staff communication.",
+      "A chat reply is not final confirmation of a booking, payment, refund, discount, cancellation, maintenance commitment or policy exception unless the reply clearly states that it is an authorized final confirmation and is supported by the applicable booking record, invoice, receipt, agreement, email or account record.",
+      "If there is any difference between a chat reply and our official records, the official records will prevail.",
     ],
   },
   {
     id: "storage",
-    number: "5",
-    title: "Chat Storage, Monitoring, Review, and Audit",
-    content: [
-      "All chat conversations with us will be stored and may be monitored, reviewed, and audited by RentMyStay for business, support, safety, quality, compliance, training, dispute resolution, fraud prevention, security, and operational purposes.",
-      "This may include: messages sent by you; replies sent by our staff; AI-assisted or automated replies; internal notes; timestamps; user, booking, property, and device-related context; uploaded files, screenshots, documents, and images; conversation labels, priority, status, routing, assignment, and support actions.",
-      "We may review and audit chat conversations to verify what was communicated, resolve complaints or disputes, improve support quality, monitor staff performance, check AI-assisted response quality, detect errors, misuse, fraud, spam, or abuse, maintain service records, and comply with legal, regulatory, accounting, security, and internal policy requirements.",
-      "By using this chat, you understand and agree that your chat conversations may be stored, linked with your booking, user, property, payment, support, email, call, or other business records, and reviewed or audited when required.",
-    ],
-  },
-  {
-    id: "automated",
     number: "6",
+    title: "Chat Records, Monitoring and Quality Review",
+    content: [
+      "Chat conversations and related records may be stored and retained where reasonably necessary for customer support, booking management, service security, quality review, dispute resolution, fraud prevention and compliance with legal obligations.",
+      "This may include: messages sent by you; replies sent by our staff; AI-assisted or automated replies; internal notes; timestamps; user, booking, property, and device-related context; uploaded files, screenshots, documents, and images; conversation labels, priority, status, routing, assignment, and support actions.",
+      "We may review chat conversations to verify what was communicated, resolve complaints or disputes, improve support quality, monitor staff performance, check AI-assisted response quality, detect errors, misuse, fraud, spam, or abuse, maintain service records, and comply with legal, regulatory, accounting, security, and internal policy requirements.",
+      "By using this chat, you understand that your chat conversations may be stored, linked with your booking, user, property, payment, support, email, call, or other business records, and reviewed where required.",
+    ],
+  },  {
+    id: "retention",
+    number: "7",
+    title: "Data Retention and Deletion",
+    content: [
+      "Chat records are retained for the period reasonably required to provide support, maintain booking and financial records, resolve disputes, prevent fraud, and meet legal and regulatory obligations. Different records may have different retention periods.",
+      "For example, chat from completed bookings may be retained longer to ensure records are complete. Anonymous enquiries that do not result in a booking may be retained for a shorter period. Payment-related messages may be retained to comply with financial regulations.",
+      "If you request deletion of your chat information, we will assess your request based on legal obligations, active bookings, pending disputes, payment processing, and other applicable reasons. Some information may not be eligible for deletion.",
+      "Details on how to request access, correction, updating, or deletion of your personal information are provided in the \"Your Privacy Rights\" section below.",
+    ],
+  },  {
+    id: "automated",
+    number: "8",
     title: "Automated Processing of Messages",
     content: [
       "By using this chat, you understand that your messages may be processed using automated systems.",
@@ -66,8 +128,18 @@ const sections = [
     ],
   },
   {
+    id: "ai-training",
+    number: "9",
+    title: "AI Training and Model Development",
+    content: [
+      "We do not permit customer chat content to be used to train publicly available or shared AI models.",
+      "Chat information may be processed by authorized employees and contracted service providers where necessary to host, operate, secure, evaluate and improve RentMyStay's private customer-support system. Such providers are permitted to process the information only for the contracted service and subject to applicable privacy and security requirements.",
+      "Chat data may be processed to analyze response quality, detect errors, identify common issues, refine AI-assisted reply suggestions, and monitor system performance.",
+    ],
+  },
+  {
     id: "privacy",
-    number: "7",
+    number: "10",
     title: "Privacy and Personal Information",
     content: [
       "Your use of chat is also governed by our Privacy Policy. Please read our Privacy Policy to understand how we collect, use, store, share, protect, and retain your personal information.",
@@ -76,8 +148,20 @@ const sections = [
     ],
   },
   {
+    id: "data-rights",
+    number: "11",
+    title: "Your Privacy Rights",
+    content: [
+      "You have the right to request access to, correct, update, or request deletion of your personal information collected through chat, subject to applicable privacy laws and legal obligations.",
+      "To exercise these rights, please contact RentMyStay privacy support with your request and any relevant chat reference. Include specific details about what information you wish to access, correct, or delete.",
+      "You can also request to withdraw optional consent for certain types of data processing, where applicable. You can request that we stop using your chat data for certain non-essential purposes (such as improvement of the system), while retaining data necessary for active bookings or legal compliance.",
+      "We will respond to your request in accordance with applicable privacy laws. Some requests may be denied if deletion would interfere with active bookings, payment records, dispute resolution, or legal obligations.",
+      "If you have a privacy concern or wish to file a grievance, please contact us using the contact details provided in the \"Contact\" section below.",
+    ],
+  },
+  {
     id: "attachments",
-    number: "8",
+    number: "12",
     title: "Attachments, Images, and Documents",
     content: [
       "You may be allowed to share images, screenshots, documents, or other files in chat.",
@@ -87,7 +171,7 @@ const sections = [
   },
   {
     id: "urgent",
-    number: "9",
+    number: "13",
     title: "Urgent Issues and Emergencies",
     content: [
       "If you are reporting an urgent issue, please clearly mention that it is urgent in your message.",
@@ -97,7 +181,7 @@ const sections = [
   },
   {
     id: "response-time",
-    number: "10",
+    number: "14",
     title: "Response Time and Human Escalation",
     content: [
       "We try to respond as quickly as possible, but we do not guarantee instant replies. Response times may vary based on team availability, issue complexity, business hours, holidays, technical issues, staff availability, or the need for internal verification.",
@@ -108,7 +192,7 @@ const sections = [
   },
   {
     id: "prohibited",
-    number: "11",
+    number: "15",
     title: "Prohibited Use",
     content: [
       "You agree not to misuse chat support.",
@@ -118,7 +202,7 @@ const sections = [
   },
   {
     id: "no-advice",
-    number: "12",
+    number: "16",
     title: "No Professional Advice",
     content: [
       "Chat responses are provided for customer support and general assistance only.",
@@ -128,7 +212,7 @@ const sections = [
   },
   {
     id: "liability",
-    number: "13",
+    number: "17",
     title: "Limitation of Liability",
     content: [
       "To the maximum extent permitted by applicable law, we are not liable for losses arising only from reliance on incomplete, delayed, outdated, misunderstood, or incorrect chat responses, especially where the matter should have been verified through official records, written confirmation, or authorized staff communication.",
@@ -137,7 +221,7 @@ const sections = [
   },
   {
     id: "changes",
-    number: "14",
+    number: "18",
     title: "Changes to These Terms",
     content: [
       "We may update these Terms of Chat from time to time.",
@@ -146,15 +230,28 @@ const sections = [
   },
   {
     id: "contact",
-    number: "15",
+    number: "19",
     title: "Contact",
     content: [
-      "For questions, corrections, escalation, or official confirmation, please contact us at:",
+      "For different questions, please contact the appropriate team:",
     ],
-    contact: {
-      email: "team@bpai.in",
-      website: "https://bpai.in/",
-    },
+    contacts: [
+      {
+        label: "RentMyStay – Bookings, Payments, Escalation",
+        email: "contact@rentmystay.com",
+        details: "For booking inquiries, payment issues, property maintenance, refunds, and support escalation.",
+      },
+      {
+        label: "RentMyStay – Privacy and Data Access",
+        email: "help@rentmystay.com",
+        details: "For privacy questions, data access requests, corrections, deletion requests, and privacy grievances.",
+      },
+      {
+        label: "RentMyStay – Support Phone",
+        email: "+91 9035750377",
+        details: "For urgent support issues and escalation by phone.",
+      },
+    ],
   },
 ];
 
@@ -176,14 +273,14 @@ export default function TermsOfChat() {
             Legal
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-            Terms of Chat
+            RentMyStay Chat Terms — Powered by Brightpath AI
           </h1>
           <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
             How our chat support works — including AI-assisted responses, storage,
             monitoring, and what you can rely on.
           </p>
           <p className="mt-4 text-gray-500 text-sm">
-            Effective Date: 01-06-2026 &nbsp;·&nbsp; Brightpath AI
+            Effective Date: June 1, 2026 &nbsp;·&nbsp; RentMyStay
           </p>
         </div>
       </div>
@@ -192,14 +289,31 @@ export default function TermsOfChat() {
       <div className="max-w-4xl mx-auto px-6 py-8">
         <div className="bg-[#f8fffe] border border-[#d0f5eb] rounded-2xl p-6 text-sm text-gray-600 leading-relaxed">
           <p>
-            These Terms of Chat explain how our chat support works, including human
-            support, AI-assisted replies, automated processing, chat storage,
-            monitoring, review, and audit.
+            This chat is operated by RentMyStay (owned and operated by BrightPath Technology and Services Pvt. Ltd.) for customer support. These Terms of Chat explain how the chat works, including human support, AI-assisted replies, storage, monitoring, and your privacy rights.
           </p>
           <p className="mt-2">
-            By starting or continuing a chat with us, you agree to these Terms of
-            Chat, our Privacy Policy, Website Terms, and any other applicable policies.
+            By using this chat, you acknowledge and accept these Chat Terms. Information about how personal data is processed is provided in the RentMyStay Privacy Notice. Where separate consent is legally required for an optional use of your information, we will request it separately.
           </p>
+          <p className="mt-2 text-xs text-gray-500">
+            <strong>Quick links:</strong> <a href="#data-rights" className="text-[#00a980] hover:underline">Privacy Rights</a> · <a href="#retention" className="text-[#00a980] hover:underline">Data Retention</a> · <a href="#ai-training" className="text-[#00a980] hover:underline">AI Training</a> · <a href="#contact" className="text-[#00a980] hover:underline">Contact</a>
+          </p>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="max-w-4xl mx-auto px-6 py-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {faqItems.map((item, idx) => (
+            <details key={idx} className="group border border-gray-200 rounded-lg p-4 hover:border-[#00a980] transition-colors">
+              <summary className="cursor-pointer font-semibold text-gray-900 text-sm group-open:text-[#00a980]">
+                {item.question}
+              </summary>
+              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                {item.answer}
+              </p>
+            </details>
+          ))}
         </div>
       </div>
 
@@ -271,6 +385,33 @@ export default function TermsOfChat() {
                       {s.contact.website}
                     </a>
                   </p>
+                </div>
+              )}
+              {s.contacts && (
+                <div className="mt-4 space-y-3 text-sm text-gray-600">
+                  {s.contacts.map((c, i) => (
+                    <div key={i} className="p-3 rounded-lg bg-white border border-gray-100">
+                      <p className="font-semibold text-gray-800 mb-1">{c.label}</p>
+                      <p className="mb-2">
+                        {c.email.startsWith("+") ? (
+                          <a
+                            href={`tel:${c.email}`}
+                            className="text-[#00a980] hover:underline"
+                          >
+                            {c.email}
+                          </a>
+                        ) : (
+                          <a
+                            href={`mailto:${c.email}`}
+                            className="text-[#00a980] hover:underline"
+                          >
+                            {c.email}
+                          </a>
+                        )}
+                      </p>
+                      <p className="text-xs text-gray-500">{c.details}</p>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
