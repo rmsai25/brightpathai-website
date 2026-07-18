@@ -1046,7 +1046,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="max-w-7xl mx-auto px-6 mt-5 pt-4 border-t border-white/10 flex justify-center">
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Brightpath Technology & Services Pvt. Ltd.
+            © {new Date().getFullYear()} Brightpath Technology and Services Pvt. Ltd.
           </p>
         </div>
       </footer>

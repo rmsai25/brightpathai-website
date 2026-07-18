@@ -107,7 +107,7 @@ const sections = [
       "We may review chat conversations to verify what was communicated, resolve complaints or disputes, improve support quality, monitor staff performance, check AI-assisted response quality, detect errors, misuse, fraud, spam, or abuse, maintain service records, and comply with legal, regulatory, accounting, security, and internal policy requirements.",
       "By using this chat, you understand that your chat conversations may be stored, linked with your booking, user, property, payment, support, email, call, or other business records, and reviewed where required.",
     ],
-  },  {
+  }, {
     id: "retention",
     number: "7",
     title: "Data Retention and Deletion",
@@ -117,7 +117,7 @@ const sections = [
       "If you request deletion of your chat information, we will assess your request based on legal obligations, active bookings, pending disputes, payment processing, and other applicable reasons. Some information may not be eligible for deletion.",
       "Details on how to request access, correction, updating, or deletion of your personal information are provided in the \"Your Privacy Rights\" section below.",
     ],
-  },  {
+  }, {
     id: "automated",
     number: "8",
     title: "Automated Processing of Messages",
@@ -238,12 +238,12 @@ const sections = [
     contacts: [
       {
         label: "RentMyStay – Bookings, Payments, Escalation",
-        email: "contact@rentmystay.com",
+        email: "help@rentmystay.com",
         details: "For booking inquiries, payment issues, property maintenance, refunds, and support escalation.",
       },
       {
         label: "RentMyStay – Privacy and Data Access",
-        email: "help@rentmystay.com",
+        email: "contact@rentmystay.com",
         details: "For privacy questions, data access requests, corrections, deletion requests, and privacy grievances.",
       },
       {
@@ -292,7 +292,13 @@ export default function TermsOfChat() {
             This chat is operated by RentMyStay (owned and operated by BrightPath Technology and Services Pvt. Ltd.) for customer support. These Terms of Chat explain how the chat works, including human support, AI-assisted replies, storage, monitoring, and your privacy rights.
           </p>
           <p className="mt-2">
-            By using this chat, you acknowledge and accept these Chat Terms. Information about how personal data is processed is provided in the RentMyStay Privacy Notice. Where separate consent is legally required for an optional use of your information, we will request it separately.
+            By using this chat, you acknowledge and accept these Chat Terms. Information about how personal data is processed is provided in the <a
+              href="https://www.rentmystay.com/Info/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RentMyStay Privacy Policy
+            </a>. Where separate consent is legally required for an optional use of your information, we will request it separately.
           </p>
           <p className="mt-2 text-xs text-gray-500">
             <strong>Quick links:</strong> <a href="#data-rights" className="text-[#00a980] hover:underline">Privacy Rights</a> · <a href="#retention" className="text-[#00a980] hover:underline">Data Retention</a> · <a href="#ai-training" className="text-[#00a980] hover:underline">AI Training</a> · <a href="#contact" className="text-[#00a980] hover:underline">Contact</a>
