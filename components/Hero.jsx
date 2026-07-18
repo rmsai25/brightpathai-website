@@ -1,8 +1,36 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Hero() {
+  useEffect(() => {
+    // Handle hash navigation on page load
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, []);
+
+  const handleNavigation = (hash) => {
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname;
+      // Always redirect to home page sections if not on home page
+      if (currentPath !== '/' && currentPath !== '') {
+        window.location.href = `/#${hash}`;
+      } else {
+        // On home page, scroll to element
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  };
   return (
     <section
       id="hero"
@@ -32,23 +60,23 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-          <Link
-            href="#contact"
+          <button
+            onClick={() => handleNavigation("contact")}
             className="px-8 py-4 rounded-full bg-[#19F7C1] text-black font-semibold
                        transition-all duration-300 hover:bg-[#12e0af] hover:scale-105
-                       shadow-[0_0_20px_#19F7C14d]"
+                       shadow-[0_0_20px_#19F7C14d] cursor-pointer"
           >
             Request Early Access
-          </Link>
+          </button>
 
-          <Link
-            href="#what-we-build"
+          <button
+            onClick={() => handleNavigation("what-we-build")}
             className="px-8 py-4 rounded-full border border-[#19F7C1] text-[#19F7C1]
                        transition-all duration-300
-                       hover:bg-[#19F7C1] hover:text-black hover:scale-105"
+                       hover:bg-[#19F7C1] hover:text-black hover:scale-105 cursor-pointer"
           >
             What We Build
-          </Link>
+          </button>
         </div>
       </motion.div>
     </section>

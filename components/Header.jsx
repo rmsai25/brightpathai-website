@@ -515,12 +515,29 @@
 
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const basePath = "";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleNavigation = (hash) => {
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname;
+      // Always redirect to home page sections if not on home page
+      if (currentPath !== '/' && currentPath !== '') {
+        window.location.href = `/#${hash}`;
+      } else {
+        // On home page, scroll to element
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header
@@ -556,31 +573,30 @@ export default function Header() {
 
         {/* DESKTOP NAVIGATION */}
         <nav className="hidden md:flex items-center gap-10 text-white text-sm font-medium">
-          <Link
-            href="#what-we-build"
-            className="hover:text-[#9CA3AF] transition"
+          <button
+            onClick={() => handleNavigation("what-we-build")}
+            className="hover:text-[#9CA3AF] transition cursor-pointer border-none bg-transparent"
           >
             What We Build
-          </Link>
-          <Link
-            href="#contact"
-            className="bg-[#19F7C1] text-black px-5 py-2 rounded-full font-semibold hover:bg-[#12e0af] transition-all shadow-[0_0_10px_#19F7C14d]"
+          </button>
+          <button
+            onClick={() => handleNavigation("contact")}
+            className="bg-[#19F7C1] text-black px-5 py-2 rounded-full font-semibold hover:bg-[#12e0af] transition-all shadow-[0_0_10px_#19F7C14d] cursor-pointer"
           >
             Request Early Access
-          </Link>
+          </button>
         </nav>
       </div>
 
       {/* MOBILE NAVIGATION */}
       {isMenuOpen && (
         <div className="md:hidden w-full bg-[#02070e]/95 text-white p-5 space-y-5">
-          <Link
-            href="#what-we-build"
-            onClick={() => setIsMenuOpen(false)}
-            className="block text-lg hover:text-[#9CA3AF]"
+          <button
+            onClick={() => handleNavigation("what-we-build")}
+            className="block text-lg hover:text-[#9CA3AF] border-none bg-transparent cursor-pointer w-full text-left"
           >
             What We Build
-          </Link>
+          </button>
         </div>
       )}
     </header>
