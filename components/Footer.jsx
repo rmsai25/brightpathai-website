@@ -993,9 +993,8 @@ export default function Footer() {
       <button
         onClick={scrollToTop}
         aria-label="Back to top"
-        className={`fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-[#00a980] text-white flex items-center justify-center shadow-lg hover:bg-[#008f6d] hover:scale-110 transition-all duration-300 ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-        }`}
+        className={`fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-[#00a980] text-white flex items-center justify-center shadow-lg hover:bg-[#008f6d] hover:scale-110 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+          }`}
       >
         <FiArrowUp size={18} />
       </button>
@@ -1049,7 +1048,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="max-w-7xl mx-auto px-6 mt-5 pt-4 border-t border-white/10 flex justify-center">
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Brightpath Technology and Services Pvt. Ltd.
+            © {new Date().getFullYear()} BrightPath Technology and Services Pvt Ltd.
           </p>
         </div>
       </footer>

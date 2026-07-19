@@ -11,7 +11,7 @@ const faqItems = [
   },
   {
     question: "Who operates this chat?",
-    answer: "BPAI chat owned and operated by Brightpath Technology and Services Pvt. Ltd. The chat uses Brightpath AI technology developed and operated by the same company.",
+    answer: "BPAI Chat is owned and operated by BrightPath Technology and Services Pvt Ltd. The chat uses Brightpath AI technology developed and operated by the same company.",
   },
   {
     question: "What information does the chat collect?",
@@ -35,7 +35,7 @@ const faqItems = [
   },
   {
     question: "How do I reach a human?",
-    answer: "Write 'Connect me to a human agent' or contact RentMyStay at help@rentmystay.com or +91 9035750377.",
+    answer: "Write 'Connect me to a human agent' or contact RentMyStay at contact@rentmystay.com or +91 9035750377.",
   },
   {
     question: "What should I do during an emergency?",
@@ -53,8 +53,8 @@ const sections = [
     number: "1",
     title: "Who Operates This Chat",
     content: [
-      "RentMyStay is a brand and service owned and operated by Brightpath Technology and Services Pvt. Ltd. This chat uses Brightpath AI technology developed and operated by the same company to provide human, AI-assisted and automated customer support.",
-      "In these Chat Terms, 'RentMyStay,' 'we,' 'us' and 'our' refer to Brightpath Technology and Services Pvt. Ltd. 'Brightpath AI' refers to the technology used to provide and support the chat service.",
+      "RentMyStay is a brand and service owned and operated by BrightPath Technology and Services Pvt Ltd. This chat uses Brightpath AI technology developed and operated by the same company to provide human, AI-assisted and automated customer support.",
+      "In these Chat Terms, 'RentMyStay,' 'we,' 'us' and 'our' refer to BrightPath Technology and Services Pvt Ltd. 'Brightpath AI' refers to the technology used to provide and support the chat service.",
       "Third-party service providers may process information necessary to host, secure, operate or support the service. They may use that information only to provide the contracted service and must comply with applicable confidentiality, security and privacy requirements.",
     ],
   },
@@ -307,7 +307,7 @@ export default function TermsOfChat() {
       <div className="max-w-4xl mx-auto px-6 py-8">
         <div className="bg-[#f8fffe] border border-[#d0f5eb] rounded-2xl p-6 text-sm text-gray-600 leading-relaxed">
           <p>
-            This chat is operated by RentMyStay (owned and operated by Brightpath Technology and Services Pvt. Ltd.) for customer support. These Terms of Chat explain how the chat works, including human support, AI-assisted replies, storage, monitoring, and your privacy rights.
+            This chat is operated by RentMyStay (owned and operated by BrightPath Technology and Services Pvt Ltd.) for customer support. These Terms of Chat explain how the chat works, including human support, AI-assisted replies, storage, monitoring, and your privacy rights.
           </p>
           <p className="mt-2">
             By using this chat, you acknowledge and accept these Chat Terms. Information about how personal data is processed is provided in the <a
