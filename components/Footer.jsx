@@ -1038,6 +1038,9 @@ export default function Footer() {
               <li>
                 <Link href="/terms-of-chat" className="hover:text-white transition">Terms of Chat</Link>
               </li>
+              <li>
+                <a href="https://www.rentmystay.com/Info/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">RentMyStay Privacy Notice</a>
+              </li>
             </ul>
           </div>
 
