@@ -23,7 +23,7 @@ const faqItems = [
   },
   {
     question: "Are conversations stored?",
-    answer: "Yes, conversations are stored to support your requests and resolve disputes. We apply a defined retention schedule ranging from 30 days for anonymous enquiries to 7 years for financial records. See 'Data Retention and Deletion' for the full schedule.",
+    answer: "Yes, conversations are stored to support your requests and resolve disputes. Retention periods vary depending on the type of record, from 30 days for certain unregistered enquiries to at least 8 financial years for statutory financial records. See 'Data Retention and Deletion' for the full schedule.",
   },
   {
     question: "Is my information used to train AI?",
@@ -53,8 +53,8 @@ const sections = [
     number: "1",
     title: "Who Operates This Chat",
     content: [
-      "RentMyStay is a brand and service owned and operated by BrightPath Technology and Services Pvt Ltd. This chat uses Brightpath AI technology developed and operated by the same company to provide human, AI-assisted and automated customer support.",
-      "In these Chat Terms, 'RentMyStay,' 'we,' 'us' and 'our' refer to BrightPath Technology and Services Pvt Ltd. 'Brightpath AI' refers to the technology used to provide and support the chat service.",
+      "BPAI Chat is a brand and service owned and operated by BrightPath Technology and Services Pvt Ltd. This chat uses Brightpath AI technology developed and operated by the same company to provide human, AI-assisted and automated customer support.",
+      "In these Chat Terms, 'BPAI Chat,' 'we,' 'us' and 'our' refer to BrightPath Technology and Services Pvt Ltd. 'Brightpath AI' refers to the technology used to provide and support the chat service.",
       "Third-party service providers may process information necessary to host, secure, operate or support the service. They may use that information only to provide the contracted service and must comply with applicable confidentiality, security and privacy requirements.",
     ],
   },
@@ -72,7 +72,7 @@ const sections = [
     number: "3",
     title: "Human and AI-Assisted Responses",
     content: [
-      "This chat may be answered by RentMyStay support staff, AI-assisted systems, automated workflows, or a combination of these.",
+      "This chat may be answered by BPAI Chat support staff, AI-assisted systems, automated workflows, or a combination of these.",
       "AI may be used to help our team respond faster, understand your request, summarize previous conversations, suggest replies, route conversations to the correct team, classify issues, detect urgency, and improve support quality.",
       "Some replies may be fully human-written, some may be AI-assisted and reviewed by staff, and some may be automated. Because of this, you should not assume every reply is written entirely by a human.",
       "AI and automated workflows may assist with classification, routing, summarisation, and reply generation, but they do not independently make final decisions concerning booking acceptance, cancellation, deposit deductions, refunds, penalties, eviction or vacate action, legal rights, or policy exceptions. All such consequential decisions require authorized staff review and supporting official records.",
@@ -83,7 +83,7 @@ const sections = [
     number: "4",
     title: "Accuracy and Verification",
     content: [
-      "We try to provide accurate and helpful responses. However, chat replies may sometimes be incomplete, delayed, outdated, misunderstood, or incorrect.",
+      "We try to provide accurate and helpful responses. However, BPAI Chat replies may sometimes be incomplete, delayed, outdated, misunderstood, or incorrect.",
       "For important matters, please verify the information before taking action. This includes, but is not limited to: booking confirmation; rent, deposit, invoice, or payment status; refund or cancellation terms; check-in and check-out details; maintenance commitments; property availability; pricing; legal or policy-related matters; safety, security, electrical, plumbing, or access-related issues.",
       "Final confirmation should come only from official records, invoices, receipts, booking confirmations, written policies, authorized staff communication, or other official documents issued by us. If there is any difference between a chat reply and our official records, the official records will prevail.",
     ],
@@ -115,13 +115,15 @@ const sections = [
     title: "Data Retention and Deletion",
     content: [
       "Chat records are retained according to our operational data retention schedule based on the nature of the information:",
-      "• Anonymous enquiries that do not lead to a booking are typically retained for 30 days.",
+      "• Unregistered enquiries that are not connected to an account or booking are typically retained for 30 days.",
       "• Registered customer conversations and support history are retained for the active duration of the account and for 3 years post-account closure.",
       "• Completed booking, agreement, and maintenance-related chat records are retained for 5 years to support contract administration and dispute resolution.",
-      "• Payment, refund, and financial transaction records are retained for 7 years to comply with statutory tax and financial auditing requirements.",
+      "• Payment-support conversations may be retained for up to 7 years.",
+      "• Books of account, invoices, vouchers, and related statutory financial records may be retained for at least 8 financial years, or longer where required by applicable law.",
       "• Attachments, images, and uploaded documents are deleted or archived within 6 months of issue resolution unless connected to a booking or dispute record.",
-      "• Security, access, and system debugging logs are automatically overwritten or deleted after 90 days.",
+      "• Routine debugging logs are generally deleted or overwritten within 90 days. Security, access, audit, traffic and processing logs may be retained for at least one year, or longer where required for security investigations or compliance with applicable law.",
       "• AI evaluation datasets containing de-identified or aggregated conversation samples are retained for up to 1 year for quality testing.",
+      "Where a record falls into more than one retention category, the longest applicable retention period will apply.",
       "If you request deletion of your chat information, we will assess your request against these legal, financial, and operational retention requirements. Details on how to request deletion are provided in the 'Your Privacy Rights' section below.",
     ],
   },
@@ -141,8 +143,8 @@ const sections = [
     title: "AI Training and Model Development",
     content: [
       "We do not use, and do not authorize our service providers to use, customer chat content to train or improve general-purpose AI models made available to the public or to other customers.",
-      "Chat content may be processed under strict access controls to evaluate and improve RentMyStay’s own support workflows, reply suggestions, and private support systems. This internal system improvement may involve manual quality reviews by authorized staff, prompt testing, creation of internal evaluation datasets, fine-tuning of private support models, and de-identification of personal details where feasible.",
-      "Our external AI and hosting service providers process chat information solely to deliver the contracted services under secure, access-controlled conditions. They are not permitted to retain or use our chat content for their own model training or independent purposes.",
+      "Chat content may be processed under strict access controls to evaluate and improve RentMyStay’s own support workflows, reply suggestions, and private support systems. This internal system improvement may involve manual quality reviews by authorized staff, prompt testing, creation of internal evaluation datasets, and fine-tuning of private support models. Personal details will be removed or appropriately de-identified before conversation samples are used for model evaluation or private-model fine-tuning, unless separate consent has been obtained or identifiable processing is otherwise permitted under applicable law.",
+      "Our external AI and hosting service providers process chat information solely to deliver the contracted services under secure, access-controlled conditions. They are not permitted to retain chat content beyond the authorized service-retention period or use it for their own model training or independent purposes.",
     ],
   },
   {
@@ -150,7 +152,20 @@ const sections = [
     number: "10",
     title: "Privacy and Personal Information",
     content: [
-      <>Your use of chat is also governed by our <a href="https://www.rentmystay.com/Info/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#00a980] hover:underline font-semibold">RentMyStay Privacy Notice</a>. Please read our <a href="https://www.rentmystay.com/Info/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#00a980] hover:underline font-semibold">RentMyStay Privacy Notice</a> to understand how we collect, use, store, share, protect, and retain your personal information. These Chat Terms govern the chat support itself and should not be presented or treated as the full privacy notice.</>,
+      <>
+        Your use of chat is also governed by the{" "}
+        <a
+          href="https://www.rentmystay.com/Info/privacy-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#00a980] hover:underline font-semibold"
+        >
+          RentMyStay Privacy Notice
+        </a>
+        , which explains how we collect, use, store, share, protect, and
+        retain personal information. These Chat Terms govern the chat
+        service itself and do not replace the full Privacy Notice.
+      </>,
       "Please avoid sharing unnecessary sensitive information in chat, including passwords, OTPs, full card details, bank passwords, or highly sensitive personal information not relevant to your support request.",
       "We will never ask you to share your password or OTP in chat. If you share incorrect, incomplete, or misleading information, our response may also be incorrect or incomplete.",
     ],
@@ -163,7 +178,8 @@ const sections = [
       "You have the right to request access to, correct, update, or request deletion of your personal information collected through chat, subject to applicable privacy laws and legal obligations.",
       "To exercise these rights, please contact RentMyStay privacy support with your request and any relevant chat reference. Include specific details about what information you wish to access, correct, or delete.",
       "Where applicable under law, you may nominate another individual to exercise your data rights in the event of your death or incapacity. You can also request to withdraw consent for optional data processing where separate consent was obtained, and the process to withdraw consent will be as straightforward as providing it.",
-      "We will respond to your request in accordance with applicable privacy laws. Some requests may be denied if deletion would interfere with active bookings, payment records, dispute resolution, or legal obligations.",
+      "We aim to acknowledge privacy requests promptly and resolve privacy requests and grievances within a reasonable period not exceeding 90 days, subject to applicable law.",
+      "Some requests may be denied or restricted if access, correction, or deletion would interfere with active bookings, payment records, dispute resolution, fraud prevention, security requirements, or legal obligations.",
       "If you have a privacy concern or wish to file a grievance, please contact us using the contact details provided in the \"Contact\" section below.",
     ],
   },
@@ -183,7 +199,8 @@ const sections = [
     title: "Minors and Children's Data",
     content: [
       "RentMyStay bookings and contractual services are intended for adults. A person under 18 should use the chat with the involvement of a parent or lawful guardian.",
-      "Please do not share a child’s personal information unless it is necessary for a legitimate booking or support requirement.",
+      "Please do not share personal information of minors unless it is necessary for a legitimate booking or support requirement.",
+      "Where we knowingly process personal data of minors and consent is required, we will obtain verifiable consent from the minor’s parent or lawful guardian in accordance with applicable law.",
     ],
   },
   {
