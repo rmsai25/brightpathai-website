@@ -475,7 +475,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY BRIGHTPATH AI */}
+      {/* WHY Brightpath AI */}
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} className="text-center mb-16">

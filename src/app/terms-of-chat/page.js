@@ -11,7 +11,7 @@ const faqItems = [
   },
   {
     question: "Who operates this chat?",
-    answer: "BPAI Chat is owned and operated by BrightPath Technology and Services Pvt Ltd. The chat uses Brightpath AI technology developed and operated by the same company.",
+    answer: "This chat service is provided and operated by BrightPath Technology and Services Pvt. Ltd. through its Brightpath AI platform. RentMyStay uses the platform to communicate with and support its guests and customers.",
   },
   {
     question: "What information does the chat collect?",
@@ -53,9 +53,19 @@ const sections = [
     number: "1",
     title: "Who Operates This Chat",
     content: [
-      "BPAI Chat is a brand and service owned and operated by BrightPath Technology and Services Pvt Ltd. This chat uses Brightpath AI technology developed and operated by the same company to provide human, AI-assisted and automated customer support.",
-      "In these Chat Terms, 'BPAI Chat,' 'we,' 'us' and 'our' refer to BrightPath Technology and Services Pvt Ltd. 'Brightpath AI' refers to the technology used to provide and support the chat service.",
-      "Third-party service providers may process information necessary to host, secure, operate or support the service. They may use that information only to provide the contracted service and must comply with applicable confidentiality, security and privacy requirements.",
+      "This chat service is provided and operated by BrightPath Technology and Services Pvt. Ltd. through its Brightpath AI platform.",
+      "BrightPath Technology and Services Pvt. Ltd. owns, develops, maintains and operates the Brightpath AI chat technology, including its human-support, AI-assisted and automated features.",
+      "RentMyStay is a business customer and tenant using the Brightpath AI platform to communicate with and support its guests and customers. RentMyStay does not own or operate the Brightpath AI platform.",
+      <>
+        In these Chat Terms:
+        <ul className="list-disc pl-5 mt-2 space-y-1">
+          <li>“BrightPath,” “we,” “us” and “our” refer to BrightPath Technology and Services Pvt. Ltd.</li>
+          <li>“Brightpath AI” refers to the chat technology and platform provided and operated by BrightPath.</li>
+          <li>“RentMyStay” refers to the business using the Brightpath AI platform for its customer-support operations.</li>
+          <li>“You” and “your” refer to the person using the chat service.</li>
+        </ul>
+      </>,
+      "Third-party service providers may process information where necessary to host, secure, maintain, operate or support the chat service. They may process such information only for the contracted purpose and subject to applicable confidentiality, security and privacy requirements.",
     ],
   },
   {
@@ -324,17 +334,22 @@ export default function TermsOfChat() {
       <div className="max-w-4xl mx-auto px-6 py-8">
         <div className="bg-[#f8fffe] border border-[#d0f5eb] rounded-2xl p-6 text-sm text-gray-600 leading-relaxed">
           <p>
-            This chat is operated by RentMyStay (owned and operated by BrightPath Technology and Services Pvt Ltd.) for customer support. These Terms of Chat explain how the chat works, including human support, AI-assisted replies, storage, monitoring, and your privacy rights.
+            This chat service is provided and operated by BrightPath Technology and Services Pvt. Ltd. through its Brightpath AI platform. RentMyStay uses the platform to provide customer support, booking assistance and related services to its guests and customers.
           </p>
           <p className="mt-2">
-            By using this chat, you acknowledge and accept these Chat Terms. Information about how personal data is processed is provided in the <a
+            These Terms of Chat explain how the chat service works, including human support, AI-assisted and automated replies, storage, monitoring, security and privacy rights.
+          </p>
+          <p className="mt-2">
+            By using this chat, you acknowledge and accept these Chat Terms. Information about how personal data is collected, used, stored and shared is provided in the applicable{" "}
+            <a
               href="https://www.rentmystay.com/Info/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#00a980] hover:underline font-semibold"
             >
               RentMyStay Privacy Notice
-            </a>. Where separate consent is legally required for an optional use of your information, we will request it separately.
+            </a>{" "}
+            and these Chat Terms. Where separate consent is legally required for an optional use of your information, it will be requested separately.
           </p>
           <p className="mt-2 text-xs text-gray-500">
             <strong>Quick links:</strong> <a href="https://www.rentmystay.com/Info/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#00a980] hover:underline font-semibold">RentMyStay Privacy Notice</a> · <a href="#data-rights" className="text-[#00a980] hover:underline">Privacy Rights</a> · <a href="#retention" className="text-[#00a980] hover:underline">Data Retention</a> · <a href="#ai-training" className="text-[#00a980] hover:underline">AI Training</a> · <a href="#contact" className="text-[#00a980] hover:underline">Contact</a>
